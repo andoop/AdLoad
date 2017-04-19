@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AdLoad.iml" filepath="$PROJECT_DIR$/AdLoad.iml" />
+      <module fileurl="file://$PROJECT_DIR$/adload/adload.iml" filepath="$PROJECT_DIR$/adload/adload.iml" />
+      <module fileurl="file://$PROJECT_DIR$/adloadcomponents/adloadcomponents.iml" filepath="$PROJECT_DIR$/adloadcomponents/adloadcomponents.iml" />
+      <module fileurl="file://$PROJECT_DIR$/adloaddemo/adloaddemo.iml" filepath="$PROJECT_DIR$/adloaddemo/adloaddemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/adloadplugina/adloadplugina.iml" filepath="$PROJECT_DIR$/adloadplugina/adloadplugina.iml" />
+    </modules>
+  </component>
+</project>
