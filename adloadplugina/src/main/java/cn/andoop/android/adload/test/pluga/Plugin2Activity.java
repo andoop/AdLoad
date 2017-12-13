@@ -1,10 +1,8 @@
 package cn.andoop.android.adload.test.pluga;
 
-import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -19,40 +17,29 @@ import cn.andoop.android.adloadcomponents.activity.FakeActivity;
  */
 
 public class Plugin2Activity extends FakeActivity {
-    private FragmentActivity mProxy;
-    private Plug mPlug;
-    public Plugin2Activity(Plug plug) {
-        this.mPlug=plug;
-    }
-    @Override
-    public void bindProxy(Activity proxy) {
-        super.bindProxy(proxy);
-        mProxy= (FragmentActivity) proxy;
-    }
-
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mProxy.setContentView(initView());
+        that.setContentView(initView());
     }
 
     private View initView() {
-        LinearLayout linearLayout = new LinearLayout(mProxy);
+        LinearLayout linearLayout = new LinearLayout(that);
         linearLayout.setOrientation(LinearLayout.VERTICAL);
 
 
-        TextView tv=new TextView(mProxy);
+        TextView tv=new TextView(that);
         tv.setTextColor(Color.parseColor("#ff0000"));
         tv.setText("bbbbbbbbbbbbbbbbbbbbbbbbbbbb");
         linearLayout.addView(tv);
 
 
-        Button button = new Button(mProxy);
+        Button button = new Button(that);
         button.setText("跳转插件中页面01");
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mPlug.startActivity(mProxy,mProxy.getClass(),mPlug.getId(),"test1_activity",null);
+               // mPlug.startActivity(that,that.getClass(),mPlug.getId(),"test1_activity",null);
             }
         });
         linearLayout.addView(button);

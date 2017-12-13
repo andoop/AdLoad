@@ -35,7 +35,7 @@ dependencies {
 
 
 //dx.bar路径，修改为本机对应路径
-def dxpath='E:/android_dev/sdk/sdk/build-tools/23.0.2/'
+def dxpath='D:/Android/sdk/build-tools/23.0.2'
 def execdex = {->
     try{
         exec {

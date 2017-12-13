@@ -1,13 +1,8 @@
 package cn.andoop.android.adload.test.pluga;
 
 import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
-import android.support.v4.util.ArrayMap;
 import android.util.Log;
 
-import java.io.Serializable;
-import java.util.HashMap;
 import java.util.Map;
 
 import cn.andoop.android.adloadcomponents.DataEntity;
@@ -17,7 +12,7 @@ import cn.andoop.android.adloadcomponents.service.ServiceWrap;
 
 
 /**
- * Created by domob on 2017/3/9.
+ * Created by andoop on 2017/3/9.
  */
 
 public class Plug extends Plugin{
@@ -33,12 +28,6 @@ public class Plug extends Plugin{
         setId("002");
 
     }
-
-    @Override
-    protected void onComands(Context context, DataEntity dataEntity) {
-        Log.e("----->" + "Plug", "onComands:");
-    }
-
     @Override
     protected boolean onReceivedCmds(DataEntity dataEntity) {
         Log.e("----->" + "Plug", "onReceivedCmds:");

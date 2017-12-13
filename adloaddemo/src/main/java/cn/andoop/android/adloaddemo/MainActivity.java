@@ -1,6 +1,5 @@
 package cn.andoop.android.adloaddemo;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -10,9 +9,7 @@ import android.widget.Toast;
 
 import com.xiaochen.progressroundbutton.AnimDownloadProgressButton;
 
-import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -143,7 +140,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openVideoPage01(View view) {
-        pluginVedio.excute(new MsgEntity()
+        pluginVedio.startActivity(this,pluginVedio.getId(),"test1_activity");
+        /*pluginVedio.excute(new MsgEntity()
                 .addCmd("type", "start_activity")
                 .addCmd("activity_id", "test1_activity")
                 .addCmd("plugin_id", pluginVedio.getId())
@@ -155,11 +153,12 @@ public class MainActivity extends AppCompatActivity {
                         Log.e("----->" + "MainActivity", "onCallBack:" + m.get("data"));
                     }
                 })
-        );
+        );*/
     }
 
     public void openVideoPage02(View view) {
-        pluginVedio.excute(new MsgEntity()
+        pluginVedio.startActivity(this,pluginVedio.getId(),"test2_activity");
+       /* pluginVedio.excute(new MsgEntity()
                 .addCmd("type", "start_activity")
                 .addCmd("activity_id", "test2_activity")
                 .addCmd("plugin_id", pluginVedio.getId())
@@ -171,6 +170,6 @@ public class MainActivity extends AppCompatActivity {
                         Log.e("----->" + "MainActivity", "onCallBack:" + m.get("data"));
                     }
                 })
-        );
+        );*/
     }
 }
